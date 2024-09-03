@@ -29,7 +29,7 @@ class LGSVLSimulator(simulators.Simulator):
         super().__init__()
         verbosePrint('Connecting to LGSVL Simulator...')
         self.client = lgsvl.Simulator(address=address, port=port)
-        if alwaysReload or self.client.current_scene != lgsvl_scene:
+        if alwaysReload or self.client.current_scene != sceneID:
             self.client.load(scene=sceneID)
         verbosePrint('Map loaded in simulator.')
 
